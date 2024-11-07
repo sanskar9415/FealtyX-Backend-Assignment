@@ -52,6 +52,7 @@ For Windows:
 ```bash
 Copy code
 python -m venv venv
+```
 .\venv\Scripts\activate
 
 Install the required dependencies using pip:
@@ -59,13 +60,15 @@ Install the required dependencies using pip:
 ```bash
 Copy code
 pip install fastapi pydantic httpx uvicorn
+```
 
 
 Run the FastAPI server:
 
-bash
+```bash
 Copy code
 uvicorn main:app --reload
+```
 The server will now be running at http://127.0.0.1:8000.
 
 Setup & Usage
