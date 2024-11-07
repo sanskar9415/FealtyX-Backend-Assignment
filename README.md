@@ -23,10 +23,8 @@ This project is a REST API implemented in Python using FastAPI. The API performs
 
 ## Table of Contents
 1. [Installation](#installation)
-2. [Setup & Usage](#setup--usage)
-3. [API Endpoints](#api-endpoints)
-4. [Ollama Integration](#ollama-integration)
-5. [Development Notes](#development-notes)
+2. [API Endpoints](#api-endpoints)
+3. [Ollama Integration](#ollama-integration)
 
 ---
 
@@ -98,15 +96,10 @@ curl.exe -X GET "http://127.0.0.1:8000/students/1/summary"
 ```
 
 Ollama Integration
-This project integrates with Ollama, a powerful AI tool for generating summaries. To use the Ollama API, follow these steps:
+### **Ollama Integration Guide**
 
-Install Ollama on your machine by following the installation guide.
-Install the Llama3 model using the following command:
-bash
-Copy code
-ollama install llama3.2
-The API will automatically send a request to the local Ollama server (http://localhost:11434) to generate a detailed summary for a student when the /students/{id}/summary endpoint is hit.
-Development Notes
-Concurrency: The FastAPI app uses asynchronous calls to interact with the Ollama API, allowing for efficient handling of concurrent requests.
-Error Handling: The application provides appropriate error messages for invalid operations, such as trying to access a non-existent student or failing to connect to the Ollama API.
-Data Storage: The student data is stored in memory using a Python dictionary. There is no need for a database for this project.
+To integrate Ollama with your Go project, follow these steps:
+
+1. **Install** Ollama on your localhost by following: https://github.com/ollama/ollama/blob/main/README.md#quickstart
+2. **Install Llama3** language model for Ollama
+3. **Make API Requests** to localhost and pass the Student object to generate the summary. Do the prompt engineering to get the summary for the Student.
