@@ -68,82 +68,35 @@ uvicorn main:app --reload
 ```
 The server will now be running at http://127.0.0.1:8000.
 
-API Endpoints
-1. Create a new student
-Endpoint: POST /students
-Request body:
-json
-Copy code
-{
-  "id": 1,
-  "name": "John Doe",
-  "age": 22,
-  "email": "johndoe@example.com"
-}
-Response:
-json
-Copy code
-{
-  "id": 1,
-  "name": "John Doe",
-  "age": 22,
-  "email": "johndoe@example.com"
-}
-2. Get all students
-Endpoint: GET /students
-Response:
-json
-Copy code
-[
-  {
-    "id": 1,
-    "name": "John Doe",
-    "age": 22,
-    "email": "johndoe@example.com"
-  },
-  ...
-]
-3. Get a student by ID
-Endpoint: GET /students/{id}
-Response:
-json
-Copy code
-{
-  "id": 1,
-  "name": "John Doe",
-  "age": 22,
-  "email": "johndoe@example.com"
-}
-4. Update a student by ID
-Endpoint: PUT /students/{id}
-Request body:
-json
-Copy code
-{
-  "name": "Johnathan Doe",
-  "age": 23,
-  "email": "johnathan@example.com"
-}
-Response:
-json
-Copy code
-{
-  "id": 1,
-  "name": "Johnathan Doe",
-  "age": 23,
-  "email": "johnathan@example.com"
-}
-5. Delete a student by ID
-Endpoint: DELETE /students/{id}
-Response: 204 No Content
-6. Generate a summary for a student by ID
-Endpoint: GET /students/{id}/summary
-Response:
-json
-Copy code
-{
-  "summary": "Johnathan Doe is a 23-year-old student with a background in ..."
-}
+## API Endpoints
+
+### Create a Student
+```bash
+curl.exe -X POST "http://127.0.0.1:8000/students" -H "Content-Type: application/json" -d "{\"id\": 1, \"name\": \"Sanskar\", \"age\": 22, \"email\": \"sanskargupta9415@gmail.com\"}"
+```
+
+### Get all studenta
+```bash
+curl.exe -X GET "http://127.0.0.1:8000/students"
+```
+### Get a Student by ID
+```bash
+curl.exe -X GET "http://127.0.0.1:8000/students/1"
+```
+### Update a Student
+```bash
+curl.exe -X PUT "http://127.0.0.1:8000/students/1" -H "Content-Type: application/json" -d "{\"id\": 1, \"name\": \"HEYYBRO\", \"age\": 56, \"email\": \"sanskargupta@gmail.com\"}"
+```
+
+### Delete a Student
+```bash
+curl.exe -X DELETE "http://127.0.0.1:8000/students/1"
+```
+### Get a Summary by ID
+```bash
+curl.exe -X GET "http://127.0.0.1:8000/students/1/summary"
+```
+
 Ollama Integration
 This project integrates with Ollama, a powerful AI tool for generating summaries. To use the Ollama API, follow these steps:
 
