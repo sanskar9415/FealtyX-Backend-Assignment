@@ -49,26 +49,18 @@ Create and activate a virtual environment:
 
 For Windows:
 
-bash
+```bash
 Copy code
 python -m venv venv
 .\venv\Scripts\activate
-For macOS/Linux:
 
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate
 Install the required dependencies using pip:
 
-bash
+```bash
 Copy code
-pip install -r requirements.txt
-To install the project dependencies (if you haven’t already cloned the repository with requirements.txt):
+pip install fastapi pydantic httpx uvicorn
 
-bash
-Copy code
-pip install fastapi uvicorn httpx
+
 Run the FastAPI server:
 
 bash
