@@ -95,7 +95,7 @@ curl.exe -X DELETE "http://127.0.0.1:8000/students/1"
 curl.exe -X GET "http://127.0.0.1:8000/students/1/summary"
 ```
 
-### **Ollama Integration
+## Ollama Integration
 
 To integrate Ollama with your Go project, follow these steps:
 
