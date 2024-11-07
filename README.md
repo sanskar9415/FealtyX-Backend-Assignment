@@ -50,7 +50,6 @@ Create and activate a virtual environment:
 For Windows:
 
 ```bash
-Copy code
 python -m venv venv
 ```
 .\venv\Scripts\activate
@@ -58,7 +57,6 @@ python -m venv venv
 Install the required dependencies using pip:
 
 ```bash
-Copy code
 pip install fastapi pydantic httpx uvicorn
 ```
 
@@ -66,69 +64,10 @@ pip install fastapi pydantic httpx uvicorn
 Run the FastAPI server:
 
 ```bash
-Copy code
 uvicorn main:app --reload
 ```
 The server will now be running at http://127.0.0.1:8000.
 
-Setup & Usage
-Virtual Environment Setup
-It is highly recommended to use a virtual environment to manage the dependencies. This ensures that your project dependencies are isolated from the global Python environment.
-
-Create the virtual environment (if you haven’t done so already):
-
-bash
-Copy code
-python -m venv venv
-Activate the virtual environment:
-
-For Windows:
-
-bash
-Copy code
-.\venv\Scripts\activate
-For macOS/Linux:
-
-bash
-Copy code
-source venv/bin/activate
-Install dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Run the server:
-
-bash
-Copy code
-uvicorn main:app --reload
-Your FastAPI app should now be accessible at http://127.0.0.1:8000.
-
-To Recreate the Environment
-If someone clones this repository, they can recreate the environment by following these steps:
-
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/fealtyx-assignment.git
-cd fealtyx-assignment
-Create and activate the virtual environment:
-
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-Install dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Run the server:
-
-bash
-Copy code
-uvicorn main:app --reload
 API Endpoints
 1. Create a new student
 Endpoint: POST /students
