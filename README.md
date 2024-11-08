@@ -1,3 +1,6 @@
+Demo Video:
+https://drive.google.com/file/d/1Q99k-Odawlx6fMcxa7raJujgiINNvEDw/view?usp=drive_link
+
 # FealtyX - Python Assignment
 
 ## Overview
